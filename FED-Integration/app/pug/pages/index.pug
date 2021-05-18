@@ -1,0 +1,123 @@
+extends ../layout
+
+block content
+	.banner
+		.banner__overlay
+		.banner__image
+			picture
+				source(media="(max-width: 768px)" srcset="images/banner/banner-768.jpg")
+				source(media="(max-width: 480px)" srcset="images/banner/banner-480.jpg")
+				img(src="images/banner/banner-1920.jpg" alt="banner image")
+		.banner__text
+			h1 INSTITUT SUPÉRIEUR DE TRAVAIL SOCIAL - MADAGASCAR
+			h2 60 ANS D'EXPERIENCE EN TRAVAIL SOCIAL
+	.container
+		.section
+			h2.container__title Nos formations
+			.formation.section__content
+				a(href="/formation/formation").formation__item.js-open-project-item
+					.formation__image
+						img(src="images/programs/1.jpg" width="300" height="300"  alt="image")
+					.formation__text
+						h3 Gestion management du centre
+				a(href="/formation/formation").formation__item.js-open-project-item
+					.formation__image
+						img(src="images/programs/2.jpg" width="300" height="300"  alt="image")
+					.formation__text
+						h3 Psychologie de l'enfant
+				a(href="/formation/formation").formation__item.js-open-project-item
+					.formation__image
+						img(src="images/programs/3.jpg" width="300" height="300"  alt="image")
+					.formation__text
+						h3 Puériculture
+	.container
+		.section
+			h2.container__title Actualités
+			.details.section__content
+				.details__item
+					.details__image
+						img.thumbnail(src="images/actu/1.jpg" width="500" height="300"  alt="image")
+					.details__text
+						h2 Loué sois-Tu
+						p La terre est notre maison commune ...
+						p
+							a.btn.btn--primary(href="/formation/article") voir plus
+				.details__item.details__item--reverse
+					.details__image
+						img.thumbnail(src="images/actu/2.jpg" width="500" height="300"  alt="image")
+					.details__text
+						h2 La saison des salons des études Supérieurs
+						h3 CRITERES D’ADMISSION
+						ul
+							li International Business Companies (IBCs) set-up on the island of Seychelles are exempt from corporation tax.
+							li No capital gains tax, no withholding tax and no exchange controls.
+
+						h3 DOSSIERS DE CANDIDATURE
+						ul
+							li  Demande manuscrite de candidature
+							li  Fiche d’inscription
+						p
+							a.btn.btn--primary(href="/formation/article") voir plus
+	.container.partner 
+		h2.container__title Nos partenaires
+		.partner__container
+			.slider.js-slider-image
+				.slider__item.partner__item
+					img(src="images/partner/1.jpg" width="100" height="100"  alt="image")
+				.slider__item.partner__item
+					img(src="images/partner/2.jpg" width="100" height="100"  alt="image")
+				.slider__item.partner__item
+					img(src="images/partner/3.jpg" width="100" height="100"  alt="image")
+				.slider__item.partner__item
+					img(src="images/partner/4.jpg" width="100" height="100"  alt="image")
+				.slider__item.partner__item
+					img(src="images/partner/4.jpg" width="100" height="100"  alt="image")
+				.slider__item.partner__item
+					img(src="images/partner/4.jpg" width="100" height="100"  alt="image")
+				.slider__item.partner__item
+					img(src="images/partner/4.jpg" width="100" height="100"  alt="image")
+				.slider__item.partner__item
+					img(src="images/partner/4.jpg" width="100" height="100"  alt="image")
+				.slider__item.partner__item
+					img(src="images/partner/4.jpg" width="100" height="100"  alt="image")
+				.slider__item.partner__item
+					img(src="images/partner/4.jpg" width="100" height="100"  alt="image")
+
+	.container.contact 
+		h2.container__title Contactez-nous!
+		.contact__container
+			.contact__map
+				p.contact__description 
+					i.fa.fa-map-marker
+					|LOT IAV 309 B IAVOLOHA, ANDOHARANOFOTSY
+				p.contact__description
+					i.fa.fa-map-marker
+					|ANTANANARIVO 102 – MADAGASCAR
+				p.contact__description 
+					i.fa.fa-phone
+					strong +261 20 22 460 34
+				p.contact__description
+					i.fa.fa-mobile
+					strong +261 32 59 404 70 
+				p.contact__description
+					i.fa.fa-mobile
+					strong +261 33 19 009 40
+				p.contact__description
+					i.fa.fa-mobile
+					strong +261 34 68 582 60
+				img(src="images/banner/map.png" alt="image")
+			.contact__form
+				form.form.js-form(data-parsley-validate data-form='default')
+					label.form__input(for='inputText')
+						span Nom
+						input(id='inputText', name='inputText', type='text', required)
+					label.form__input(for='inputMail')
+						span E-mail
+						input(id='inputMail', name='inputMail', type='email', required)
+					label.form__input(for='inputPassword')
+						span Sujet de votre message
+						input(id='inputText', name='inputText', type='email', required)
+					label.form__input(for='inputTextArea')
+						span Votre message
+						textarea(id='inputTextArea', name='inputTextArea', required)
+					input.btn.btn--primary.js-form-submit(type='submit' value='Envoyer')

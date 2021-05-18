@@ -1,0 +1,45 @@
+.banner {
+    position: relative;
+    box-shadow: 0 -2px 15px -2px #ccc;
+    &__overlay {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,175,102,0.2);
+    }
+    &__text {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        text-align: center;
+        @include breakpoint(large) {
+            left: 10%;
+            text-align: left;
+            transform: translateY(-50%);
+            text-align: left;
+        }
+        p {
+            font-size: 16px;
+            text-align: center;
+            font-weight: 600;
+            color: #FFF;
+            // @include breakpoint(large) {
+            //     max-width: 500px;
+            //     font-size: 24px;
+            // }
+        }
+        h2,h1 {
+            font-size: 24px;
+            min-width: 400px;
+            color: #FFF;
+            @include breakpoint(large) {
+                font-size: auto;
+            }
+        }
+    }
+}

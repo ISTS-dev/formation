@@ -1,0 +1,31 @@
+.contact {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        @include breakpoint(medium) {
+            flex-direction: row;
+        }
+    }
+    &__form {
+        width: 100%;
+        @include breakpoint(medium) {
+            width: 60%;
+            
+        }
+    }
+    &__map {
+        width: 100%;
+        @include breakpoint(medium) {
+            width: 40%;
+            padding: 20px 20px 20px 0;
+        }
+        img {
+            width: 100%;
+        }
+        .fa {
+            font-size: 20px;
+            margin-right: 20px;
+            color: $primary-color;
+        }
+    }
+}

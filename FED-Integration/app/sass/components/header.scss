@@ -1,0 +1,136 @@
+.headerMobile {
+    position: fixed;
+    background-color: $white-color;
+    width: 100%;
+    top: -1000px;
+    z-index: 4;
+    padding: 20px;
+    transition: top .3s ease;
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            margin: 0 0 15px;
+            a {
+                text-decoration: none;
+                font-weight: 600;
+                color: $primary-color;
+            }
+        }
+    }
+    &.open {
+        top: 80px;
+        transition: top .3s ease;
+    }
+    @include breakpoint(large) {
+        display: none;
+    }
+}
+
+.header {
+    width: 100%;
+    background-color: $white-color;
+    z-index: 5;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 35px;
+    box-shadow: 0 -2px 15px -2px $shadow-color;
+    background-color: $white-color-rgba-9;
+    position: fixed;
+    top: 0;
+    @include breakpoint(large) {
+        position: relative;
+        background-color: $primary-color;
+        box-shadow: 0 -2px 15px -2px transparent;
+        top: auto;
+    }
+    &.sticky {
+        transition: top .3s ease;
+        @include breakpoint(medium) {
+            box-shadow: 0 -2px 15px -2px $shadow-color;
+            background-color: $white-color-rgba-9;
+            position: fixed;
+            top: 0;
+            z-index: 7;
+            .header__nav {
+                a {
+                    color: $primary-color;
+                }
+                li:hover {
+                    a {
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+    }
+    &__mobile-menu-open-btn {
+        color: $primary-color;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        @include breakpoint(large) {
+            display: none;
+        }
+    }
+    &__mobile-menu-close-btn {
+        color: $primary-color;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        @include breakpoint(large) {
+            display: none;
+        }
+    }
+    &__logo {
+        display: block;
+        width: auto;
+        height: 65px;
+        @include breakpoint(large) {
+            display: none;
+        }
+    }
+    &__nav {
+        display: none;
+        @include breakpoint(large) {
+            display: block;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+            li {
+                cursor: pointer;
+                display: inline-block;
+                transition: border .3s ease;
+                border-bottom: 3px solid transparent;
+                &:hover {
+                    border-bottom: 3px solid $secondary-color;
+                    transition: border .3s ease;
+                    a {
+                        display: inline-block;
+                        padding: 26px 15px;
+                        transition: color .3s ease;
+                        color: $secondary-color;
+                    }
+                }
+                a {
+                    display: inline-block;
+                    padding: 26px 15px;
+                    text-decoration: none;
+                    font-weight: 600;
+                    transition: color .3s ease;
+                    color: $primary-color;
+                    @include breakpoint(medium) {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+}

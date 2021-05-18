@@ -1,0 +1,36 @@
+extends ../../layout
+
+block content
+    
+    .container.fullpage.js-vortex-container(data-vortex-scenario='')
+        .container__body.small
+            h1 Registration
+            h2= title
+            .js-error-container
+            form.form.js-form(data-parsley-validate data-form='registration')
+                label.form__input(for='inputText1')
+                    span inputText1
+                    input(id='inputText1', name='inputText1', type='text', required)
+                label.form__input(for='inputText2')
+                    span inputText2
+                    input(id='inputText2', name='inputText2', type='text', required)
+                label.form__input(for='inputText3')
+                    span inputText3
+                    input(id='inputText3', name='inputText3', type='text', required)
+                label.form__input(for='inputMail')
+                    span inputMail
+                    input(id='inputMail', name='inputMail', type='email', required)
+                label.form__input(for='inputPassword')
+                    span inputPassword
+                    input(id='inputPassword', name='inputPassword', type='password', required)
+                label.form__input(for='inputPassword2')
+                    span inputPassword2
+                    input(id='inputPassword2', name='inputPassword2', type='password', required)
+                fieldset
+                    .checkbox
+                        input#checkbox(name='checkbox' checked='checked' type='checkbox', required)
+                        .checkmark
+                        label(for='checkbox') Keep me logged in
+            .container__footer     
+                input.btn.btn--primary.js-signup-btn.btn--disabled.js-dynamic-button(type='submit' value='Register')
+                a.btn.btn--secondary(href='/login') Login

@@ -1,0 +1,43 @@
+extends ../../layout
+
+block content
+	
+	.container.calendar
+		h2.container__title Calendrier des formations
+		.calendar__header
+			a.btn.btn--secondary.js-calendar-today(href='#') Aujourd'hui
+			.header-action
+				a.btn.btn--secondary.js-calendar-prev(href='#') Précédent
+				span.calendar__range.js-calendar-range
+				a.btn.btn--secondary.js-calendar-next(href='#') Suivant
+		.calendar__container
+			#calendar.js-calendar
+		.calendar__modal.js-calendar-modal-container-update.sr-only
+			form.form.js-form(data-parsley-validate data-form='default')
+				label.form__input(for='title')
+					span Titre
+					input(id='title', name='title', type='text', required)
+				label.form__input(for='description')
+					span Description
+					input(id='description', name='description', type='text', required)
+				input.btn.btn--primary.js-form-submit(type='submit' value='Valider')
+		.calendar__modal.js-calendar-modal-container-details.sr-only
+			h1 Gestion management du centre
+			h2 Une journée.
+			h3 Session numero 1
+			ul
+				li Une formation en alternance
+				li Des apports, réflexions et théories sur les savoirs spécialisés du travail social
+				li Une formation en  sciences humaines
+				li Une Connaissance et une pratique de la déontologie professionnelle
+				li Une expérimentation professionnelle à travers les stages successifs
+				li Une intégration progressive pour se situer comme professionnel du Travail Social dans une équipe pluridisciplinaire
+				li Des voyages d’études
+			br
+			a.btn.btn--secondary.js-update-calendar(href='/formation') Voir
+			a.btn.btn--secondary.js-update-calendar(href='#') Modifier
+			a.btn.btn--primary.js-delete-calendar(href='#') Supprimer
+		.calendar__modal.js-calendar-modal-container-confirm.sr-only
+			h1 Supprimer?
+			a.btn.btn--secondary.js-confirm-delete-calendar(href='#') OUI
+			a.btn.btn--primary.js-close-modal(href='#') NON

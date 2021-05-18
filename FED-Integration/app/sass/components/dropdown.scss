@@ -1,0 +1,41 @@
+.dropdown {
+    &__itemTitle {
+        cursor: pointer;
+        user-select: none;
+        padding: 15px 65px 15px 30px;
+        border-radius: 20px;
+        box-shadow: 0 3px 7px 1px rgba(0, 0, 0, .2);
+        margin: 0 0 20px 0;
+        color: $primary-color;
+        position: relative;
+        .fa {
+            font-size: 45px;
+            color: $secondary-color;
+            font-weight: 700;
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            transform: translateY(-50%);
+            transition: transform .3s ease;
+        }
+        &.open {
+            .fa {
+                transform: translateY(-50%) rotate(180deg);
+                transition: transform .3s ease;
+            }
+        }
+    }
+    &__itemContent {
+        user-select: none;
+        padding: 20px 30px 100px;
+        display: none;
+        transition: display .3s ease;
+        &.open {
+            transition: display .3s ease;
+            display: block;
+        }
+    }
+    &__action {
+        margin: 40px 0 0;
+    }
+}

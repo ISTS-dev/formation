@@ -1,0 +1,20 @@
+.js-webservice-params(data-webservice-status='OK', data-webservice-redirect-timer='', data-webservice-redirect-url='', data-webservice-popin-timer='3000')
+
+h1 Login
+.js-error-container
+form.form.js-form(data-parsley-validate data-form='login')
+    label.form__input(for='inputMail')
+        span inputMail
+        input(id='inputMail', name='inputMail', type='email', required)
+    label.form__input(for='inputPassword')
+        span inputPassword
+        input(id='inputPassword', name='inputPassword', type='password', required)
+    a.btn.btn--link.js-open-form(href='#', data-vortex-action='reset-password', data-vortex-scenario='reset-password') forget password?
+    fieldset
+        .checkbox
+            input#checkbox(name='checkbox' checked='checked' type='checkbox', required)
+            .checkmark
+            label(for='checkbox') Keep me logged in
+.form__footer
+    input.btn.btn--primary.js-signin-btn.btn--disabled.js-dynamic-button(type='submit' value='Login')
+    a.btn.btn--secondary.js-open-form(href='#', data-vortex-action='register', data-vortex-scenario='') Registration

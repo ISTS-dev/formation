@@ -1,0 +1,24 @@
+extends ../../layout
+
+block content
+    
+    .container.login.container--small.js-vortex-container(data-vortex-scenario='')
+        .container__body.small
+            h1 Se connecter
+            .js-error-container
+            form.form.js-form(data-parsley-validate data-form='login')
+                label.form__input(for='inputMail')
+                    span E-mail
+                    input(id='inputMail', name='inputMail', type='email', required)
+                label.form__input(for='inputPassword')
+                    span Mot de passe
+                    input(id='inputPassword', name='inputPassword', type='password', required)
+                a.btn.btn--link(href='/formation/reset-password') Réinitialiser le mot de passe ?
+                fieldset
+                    .checkbox
+                        input#checkbox(name='checkbox' checked='checked' type='checkbox', required)
+                        .checkmark
+                        label(for='checkbox') Garder ma session ouverte
+            .container__footer     
+                input.btn.btn--primary.js-signin-btn.btn--disabled.js-dynamic-button(type='submit' value='Login')
+                a.btn.btn--secondary(href='/formation/contact') Demander un accès

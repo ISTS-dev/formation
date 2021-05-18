@@ -1,0 +1,47 @@
+extends ../../layout
+
+block content
+    
+    .container 
+        h1 Forms Template
+        form.form.js-form(data-parsley-validate data-form='default')
+            label.form__input(for='inputText')
+                span inputText
+                input(id='inputText', name='inputText', type='text', required)
+            label.form__input(for='inputMail')
+                span inputMail
+                input(id='inputMail', name='inputMail', type='email', required)
+            label.form__input(for='inputPassword')
+                span inputPassword
+                input(id='inputPassword', name='inputPassword', type='password', required)
+            label.form__input(for='inputTextArea')
+                span inputTextArea
+                textarea(id='inputTextArea', name='inputTextArea', required)
+            fieldset
+                .checkbox
+                    input#checkbox(name='checkbox' checked='checked' type='checkbox', required)
+                    .checkmark
+                    label(for='checkbox') checkbox
+            fieldset
+                .radio
+                    input#radio1(name='radio' checked='checked' type='radio')
+                    .checkmark
+                    label(for='radio1') radio1
+                .radio
+                    input#radio2(name='radio' checked='checked' type='radio')
+                    .checkmark
+                    label(for='radio2') radio2
+        .container__footer
+            input.btn.btn--primary.js-form-submit(type='submit' value='Submit')
+
+    .container
+        h2 Button
+        input.btn.btn--primary(type='submit' value='Primary input button')
+        input.btn.btn--primary.btn--disabled(type='submit' value='Primary input button disabled')
+        a.btn.btn--primary(href='#') Primary link button
+        a.btn.btn--primary.btn--disabled(href='#') Primary link button disabled
+        input.btn.btn--secondary(type='submit' value='Secondary input button')
+        a.btn.btn--secondary(href='#') Secondary link button
+        a.btn.btn--secondary.btn--disabled(href='#') Secondary link button disabled
+        a.btn.btn--link(href='#') Simple link button
+        a.btn.btn--link.btn--disabled(href='#') Simple link button disabled

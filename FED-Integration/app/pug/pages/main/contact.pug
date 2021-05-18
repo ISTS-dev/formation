@@ -1,0 +1,43 @@
+extends ../../layout
+
+block content
+	
+	.container.contact 
+		h2.container__title Contactez-nous!
+		
+		.contact__container
+			.contact__map
+				p.contact__description 
+					i.fa.fa-map-marker
+					|LOT IAV 309 B IAVOLOHA, ANDOHARANOFOTSY
+				p.contact__description
+					i.fa.fa-map-marker
+					|ANTANANARIVO 102 – MADAGASCAR
+				p.contact__description 
+					i.fa.fa-phone
+					strong +261 20 22 460 34
+				p.contact__description
+					i.fa.fa-mobile
+					strong +261 32 59 404 70 
+				p.contact__description
+					i.fa.fa-mobile
+					strong +261 33 19 009 40
+				p.contact__description
+					i.fa.fa-mobile
+					strong +261 34 68 582 60
+				img(src="images/banner/map.png" alt="image")
+			.contact__form
+				form.form.js-form(data-parsley-validate data-form='default')
+					label.form__input(for='inputText')
+						span Nom
+						input(id='inputText', name='inputText', type='text', required)
+					label.form__input(for='inputMail')
+						span E-mail
+						input(id='inputMail', name='inputMail', type='email', required)
+					label.form__input(for='inputPassword')
+						span Sujet de votre message
+						input(id='inputText', name='inputText', type='email', required)
+					label.form__input(for='inputTextArea')
+						span Votre message
+						textarea(id='inputTextArea', name='inputTextArea', required)
+					input.btn.btn--primary.js-form-submit(type='submit' value='Envoyer')

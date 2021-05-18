@@ -1,0 +1,186 @@
+// 1. Global
+// ---------
+
+$global-font-size: 100%;
+$global-width: rem-calc(1100);
+$global-lineheight: 1.5;
+
+// Color
+// ---------
+$blue-powder: #c0e5dc;
+$brilliant-teal: #a5dfd3;
+$sky-blue: #7ad9d8;
+$pampers-yellow: #ffdd00;
+$pampers-teal: #00b2a9;
+$dark-teal: #3a5770;
+$subtle-tint: #f2fafa;
+$off-white: #f0f2f2;
+$platinium: #dee8e8;
+$light-gray: #d1dada;
+$ash-gray: #afb7b7;
+$manatee: #989c9c;
+$coral: #ff7887;
+$red2: #fa4652;
+$light-green: #84d1ae;
+$charcoral: #7a8080;
+$off-black: #404242;
+$color-text: $charcoral;
+// color to validate with designer
+$unknow-blue: #f7fcfc;
+$unknow-blue-2: #f0faf9;
+$unknow-blue-3: #e3f6f6;
+$unknow-yellow: #fff6bd;
+$unknow-gray: #fcfcfc;
+
+$foundation-palette: (
+    primary: #46929c,
+    secondary: #ff7887,
+    success: #3adb76,
+    warning: #ffae00,
+    alert: #cc4b37
+);
+$black: #0a0a0a;
+$white: #ffffff;
+
+.modal {
+    display: block;
+    position: relative;
+    top: 0 !important;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    border: 2px solid $off-white;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    backface-visibility: hidden;
+    outline: none;
+    margin: 0 auto;
+    padding: 20px 35px;
+    z-index: 1006;
+    transform: scale(.95);
+    transition: transform .4s;
+    will-change: transform;
+    @include breakpoint(xlarge) {
+        width: calc((#{rem-calc(1100)} / 12) * 5);
+        height: inherit;
+        top: inherit;
+        margin: 5% auto;
+        overflow: visible;
+    }
+    [aria-hidden='false'] & {
+        transform: scale(1);
+    }
+    &.medium {
+        @include breakpoint(xlarge) {
+            width: calc((#{rem-calc(1100)} / 12) * 6.5);
+        }
+    }
+    &.big {
+        @include breakpoint(xlarge) {
+            width: calc((#{rem-calc(1100)} / 12) * 8);
+        }
+    }
+    &.extraBig {
+        @include breakpoint(xlarge) {
+            width: calc((#{rem-calc(1100)}));
+        }
+    }
+    &.full {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        background: rgba(255, 255, 255, .95);
+        border-radius: 0;
+        margin: 0;
+        border: 0;
+        .modal__close {
+            height: 0;
+        }
+        .modal__cross {
+            top: 51px;
+            .fa {
+                font-size: 14px;
+                font-weight: bold;
+                background-color: #3a5770;
+                opacity: .9;
+                -webkit-transition: opacity .4s;
+                transition: opacity .4s;
+                color: white;
+                border-radius: 50%;
+                padding: 11px;
+                border: 4px solid white;
+            }
+        }
+    }
+    &.carousel {
+        padding: 64px 0;
+        @include breakpoint(large) {
+            padding: 48px 80px 96px;
+        }
+        .modal__cross {
+            top: -64px;
+            @include breakpoint(large) {
+                top: -48px;
+                right: -80px;
+            }
+        }
+    }
+    &__overlay {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1005;
+        background: rgba($dark-teal, .56);
+        -webkit-overflow-scrolling: touch;
+        overflow-y: auto;
+        opacity: 0;
+        transition: opacity .2s;
+        will-change: opacity;
+        [aria-hidden='false'] & {
+            opacity: 1;
+        }
+    }
+    &__content {
+        height: calc(100% - 60px);
+    }
+    &__close {
+        height: 60px;
+        position: relative;
+        z-index: 10;
+        &:hover {
+            @media (pointer: fine) {
+                cursor: pointer;
+                outline: none;
+            }
+        }
+    }
+    &__cross {
+        position: absolute;
+        right: 0;
+        padding: 0 0 24px;
+        @include breakpoint(medium down) {
+            right: 0;
+            left: inherit;
+        }
+        &:hover {
+            @media (pointer: fine) {
+                text-decoration: none;
+                .fa {
+                    opacity: 1;
+                }
+            }
+        }
+        .fa {
+            font-size: 22px;
+            color: $dark-teal;
+            opacity: .56;
+            transition: opacity .4s;
+        }
+    }
+}

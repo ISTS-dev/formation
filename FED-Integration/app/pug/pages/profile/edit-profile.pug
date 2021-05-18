@@ -1,0 +1,32 @@
+extends ../../layout
+
+block content
+    
+    .container
+        .container__body.small
+            h1 Edit Profile
+            .js-error-container
+            form.form.js-form.fullpage.js-vortex-container(data-vortex-scenario='edit-profile', data-parsley-validate)
+                fieldset
+                    .radio
+                        input#radio1(name='radio' checked='checked' type='radio')
+                        .checkmark
+                        label(for='radio1') radio1
+                    .radio
+                        input#radio2(name='radio' checked='checked' type='radio')
+                        .checkmark
+                        label(for='radio2') radio2
+                label.form__input(for='inputText1')
+                    span inputText1
+                    input(id='inputText1', name='inputText1', type='text', required)
+                label.form__input(for='inputText2')
+                    span inputText2
+                    input(id='inputText2', name='inputText2', type='text', required)
+                label.form__input(for='inputText3')
+                    span inputText3
+                    input(id='inputText3', name='inputText3', type='text', required)
+                label.form__input(for='inputMail')
+                    span inputMail
+                    input(id='inputMail', name='inputMail', type='email', required, disable)
+            .container__footer
+                input.btn.btn--primary.btn--disabled.js-dynamic-button.js-update-profile-btn(type='submit' value='Save')

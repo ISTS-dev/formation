@@ -1,0 +1,126 @@
+doctype html
+
+html(lang='en')
+
+	head
+
+		meta(charset='UTF-8')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no')
+		title='Horizon Boilerplate'
+		meta(name='description', content='Front-End Boilerplate is a starter kit that uses Gulp 4, Express.js, Webpack/Babel/ES6, SASS, PUG and foundation-sites framework')
+		link(href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet", integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN", crossorigin="anonymous")
+		link(href="https://cdnjs.cloudflare.com/ajax/libs/tui-calendar/1.13.0/tui-calendar.css", rel="stylesheet", crossorigin="anonymous")
+		link(href="https://cdn.jsdelivr.net/npm/tui-date-picker@4.1.0/dist/tui-date-picker.css", rel="stylesheet", crossorigin="anonymous")
+		link(href="https://cdn.jsdelivr.net/npm/tui-time-picker@2.0.3/dist/tui-time-picker.css", rel="stylesheet", crossorigin="anonymous")
+		link(href="https://fonts.googleapis.com/css?family=Cinzel+Decorative&display=swap", rel="stylesheet")
+		link(rel='icon', type='image/png', href='images/favicon.png')
+		link(rel='stylesheet', href='./styles/app.css')
+
+	body
+
+		header
+			.header
+				a.header__mobile-menu-open-btn.js-menu-open-icon(href="javascript:void(0)")
+					span.sr-only open
+					i.fa.fa-bars
+				img.header__logo(src="images/logo.png" width="150" height="30" alt="image")
+				a.header__mobile-menu-close-btn.js-menu-close-icon.sr-only(href="javascript:void(0)")
+					span.sr-only close
+					i.fa.fa-times
+				nav.header__nav
+					ul
+						li
+							a(href="/formation/") Accueil
+						li
+							a(href="/formation/formations") Formations
+						li
+							a(href="/formation/calendar") Agenda
+						li
+							a(href="/formation/articles") Actualités
+						li
+							a(href="/formation/partners") Partenaires
+						li
+							a(href="/formation/contact") Nous contacter
+						li
+							a(href="/formation/login") Se connecter
+
+		.headerMobile.js-mobile-menu
+			ul
+				li
+					a.js-mobile-menu-item(href="/formation/") Accueil
+				li
+					a.js-mobile-menu-item(href="/formation/") Accueil
+				li
+					a.js-mobile-menu-item(href="/formation/formations") Formations
+				li
+					a.js-mobile-menu-item(href="/formation/calendar") Agenda
+				li
+					a.js-mobile-menu-item(href="/formation/articles") Actualités
+				li
+					a.js-mobile-menu-item(href="/formation/partners") Partenaires
+				li
+					a.js-mobile-menu-item(href="/formation/contact") Nous contacter
+				li
+					a.js-mobile-menu-item(href="/formation/login") Se connecter
+
+		block content
+
+		footer.footer
+			.footer__item
+				h3 INSTITUT SUPÉRIEUR DE TRAVAIL SOCIAL - MADAGASCAR
+				p L’Institut Supérieur de Travail Social sise à Andoharanofotsy forme des professionnels en Travail Social. Il travaille avec des enseignants aguerris dans le Travail Social. L’ISTS est un institut d’enseignement supérieur privé confessionnel affilié à l’Université Catholique de Madagascar (U.C.M). La formation dispensée est sanctionnée par un diplôme professionnel en travail social suivant la spécialité choisie. Les travailleurs sociaux issus de l’ISTS sont directement opérationnels.
+			
+			.footer__item
+				p Depuis sa création concomitante avec l'indépendance de Madagascar l'ISTS s'est assigné un double objectif. D'abord celui d'être un acteur de développement à part entière et de contribuer à l'édification d'un Etat de droit et à l'avènement d'une société démocratique où les inégalités et injustices sont combattues et les richesses équitablement partagées. Cet engagement pour le développement de Madagascar se concrétise au travers du second objectif de l'ISTS. 
+					a(href="#") En savoir plus
+				
+
+			.footer__item
+				ul.footer__nav
+					li
+						a(href="/formation/") Accueil
+					li
+						a(href="/formation/formations") Formations
+					li
+						a(href="/formation/calendar") Agenda
+					li
+						a(href="/formation/articles") Actualités
+					li
+						a(href="/formation/partners") Partenaires
+					li
+						a(href="/formation/contact") Nous contacter
+					li
+						a(href="/formation/login") Se connecter
+
+			.footer__item
+				ul.footer__icons
+					li
+						a(href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer")
+							span.sr-only icon
+							i.fa.fa-facebook-square
+					li
+						a(href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer")
+							span.sr-only icon
+							i.fa.fa-linkedin-square
+					li
+						a(href="https://www.viadeo.com/" target="_blank" rel="noopener noreferrer")
+							span.sr-only icon
+							i.fa.fa-viadeo-square
+					li
+						a(href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer")
+							span.sr-only icon
+							i.fa.fa-twitter-square
+
+			.footer__text
+				p &copy; 2021, ISTS - MADAGASCAR
+
+		script(src='https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js')
+		script.
+			WebFont.load({
+				google: {
+					families: ['Open Sans:300,400']
+				}
+			});
+
+		script(src='./scripts/app.js', async)

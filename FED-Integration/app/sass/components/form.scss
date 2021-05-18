@@ -1,0 +1,114 @@
+.form {
+    width: 100%;
+    &__input {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 25px;
+        span {
+            margin-bottom: 10px;
+        }
+        input,
+        textarea {
+            width: 100%;
+            box-shadow: none;
+            border-style: none;
+            border: 1px solid $primary-color;
+            outline-color: $primary-color;
+        }
+        input {
+            height: 35px;
+            padding: 0 15px;
+            font-size: 14px;
+        }
+        textarea {
+            padding: 5px 15px;
+            font-size: 14px;
+        }
+    }
+    fieldset {
+        padding: 0;
+        margin-bottom: 20px;
+        border: 0;
+        .checkbox,
+        .radio {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            label {
+                margin-left: 10px;
+            }
+        }
+    }
+    ul.parsley-errors-list {
+        margin: 0;
+        padding: 0;
+        color: $warning-color;
+        position: absolute;
+        bottom: -22px;
+        font-size: 12px;
+        li {
+            list-style-type: none;
+        }
+    }
+}
+.btn {
+    border: 0;
+    margin: 0 20px 10px 0;
+    padding: 10px 15px;
+    background-color: transparent;
+    color: #000;
+    text-decoration: none;
+    line-height: 18px;
+    font-size: 16px;
+    outline: 0;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-weight: 600;
+    &:hover {
+        text-decoration: none;
+        outline: 0;
+    }
+    &--secondary,
+    &--primary {
+        height: 44px;
+        border: 1px solid $primary-color;
+    }
+    &--primary {
+        color: $white-color;
+        background-color: $primary-color;
+        &:hover {
+            background-color: $primary-color-rgba;
+        }
+    }
+    &--secondary {
+        color: $primary-color;
+        &:hover {
+            color: $white-color;
+            background-color: $primary-color;
+        }
+    }
+    &--link {
+        display: block;
+        padding: 0;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &--disabled {
+        height: 44px;
+        background-color: $shadow-color;
+        pointer-events: none;
+        border: 1px solid $shadow-color;
+        color: $white-color;
+        &.btn--link {
+            background-color: transparent;
+            border: 1px solid transparent;
+            height: auto;
+        }
+    }
+}

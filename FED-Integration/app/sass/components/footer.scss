@@ -1,0 +1,74 @@
+.footer {
+    background-color: $primary-color;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0 60px;
+    margin-top: 200px;
+    @include breakpoint(medium) {
+        flex-direction: row;
+        padding: 35px 0 75px;
+    }
+    &__item {
+        padding: 20px 35px;
+        @include breakpoint(medium) {
+            padding: 0 35px;
+        }
+        h3 {
+            margin: 10px 0 15px;
+            font-size: 18px;
+            font-weight: 600;
+            color: $white-color;
+        }
+        p {
+            max-width: 500px;
+            margin: 10px 0;
+            font-size: 14px;
+            color: $white-color;
+        }
+        a {
+            color: $white-color;
+        }
+    }
+    &__text {
+        position: absolute;
+        z-index: 3;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(255, 255, 255, .3);
+        p {
+            margin: 10px;
+            font-size: 14px;
+            color: $white-color;
+        }
+    }
+    &__nav {
+        margin: 0;
+        padding: 0;
+        li {
+            margin: 0 0 15px;
+            list-style: none;
+            a {
+                color: $white-color;
+            }
+        }
+    }
+    &__icons {
+        margin: 0;
+        padding: 0;
+        li {
+            margin: 0 15px 0 0;
+            list-style: none;
+            display: inline;
+            a {
+                color: $white-color;
+            }
+            i {
+                font-size: 28px;
+            }
+        }
+    }
+}
